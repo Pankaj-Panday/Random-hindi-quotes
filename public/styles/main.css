@@ -1,0 +1,92 @@
+:root {
+	--text-color: #333333;
+	--btn-text-color: #ffffff;
+	--btn-bg-color: #e21b5a;
+	--btn-hover-color: #bc1248;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: inherit;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+main.container {
+	color: var(--text-color);
+	width: clamp(310px, 90%, 700px);
+	margin: 100px auto;
+	padding: 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	row-gap: 25px;
+	align-items: center;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+.btn {
+	padding: 10px 40px;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	color: var(--btn-text-color);
+	background-color: var(--btn-bg-color);
+	border-radius: 10px;
+	border-color: transparent;
+	cursor: pointer;
+	transition-property: background-color;
+	transition-duration: 100ms;
+}
+
+.btn:hover,
+.bth:focus {
+	background-color: var(--btn-hover-color);
+}
+
+.quote-box > h2 {
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+.quote-box > .quote {
+	font-family: "Tiro Devanagari Hindi", serif;
+	font-size: 1.2rem;
+	padding: 20px 5px;
+	line-height: 1.5;
+}
+
+footer {
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	bottom: 5px;
+	font-size: 0.8rem;
+}
+
+@media screen and (max-width: 760px) {
+	main.container {
+		margin: 40px auto;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	main.container {
+		margin: 20px auto;
+	}
+	html {
+		font-size: 14px;
+	}
+}
