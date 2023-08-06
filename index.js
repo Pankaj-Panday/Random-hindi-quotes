@@ -32,10 +32,8 @@ app.post("/", async (req, res) => {
 			year: year,
 		});
 	} catch (error) {
-		if (error.status !== 200) {
-			console.log(error.response.data);
-			res.status(500).send("Internal Server Error");
-		}
+		console.log(error.response.data);
+		res.status(500).send("Internal Server Error");
 	}
 });
 
