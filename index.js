@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 import path from "path";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3001;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const API_URL = "https://hindi-quotes.vercel.app/random";
